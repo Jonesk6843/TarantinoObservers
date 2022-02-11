@@ -16,6 +16,7 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("IT REALLY WORKS!");
         }
     }
 }
