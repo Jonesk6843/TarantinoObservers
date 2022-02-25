@@ -1,0 +1,5 @@
+name:Spider
+name:Gold Goblin
+name:Infantry Goblin
+name:High Knight Goblin
+name:High Orc

@@ -21,25 +21,100 @@ namespace ConsoleUI
             {
                 //variables
                 int steps = 0;
+                StreamReader inputFile;
 
-                //Arrays
-                string[] rooms = new string[5] {"Entrance", "Abandoned Lobby Room", "Hallway", "Hallway #2", "King's Quarters"};
-                string[] weapons = new string[4];
-                Array.Sort<string>(weapons);
-                string[] potions = new string[2] {"Elixer of Healing", "Stone Skin"};
-                Array.Sort<string>(potions);
-                string[] treasures = new string[3] {"Gold Pouch", "Goblin eye", "Crown of the High Orc"};
-                Array.Sort<string>(treasures);
-
-                //Lists
-                List<string> items = new List<string>() {"Observer's Notebook", "Lockpick set", "Ink and feather", "Smoke Bombs"};
+                //Creating Lists
+                string[] rooms = new string[5];
+                List<string> weapons = new List<string>();
+                weapons.Sort();
+                List<string> potions = new List<string>();
+                potions.Sort();
+                List<string> treasures = new List<string>();
+                treasures.Sort();
+                List<string> items = new List<string>();
                 items.Sort();
-                List<string> mobs = new List<string>() {"Spider", "Gold Goblin", "Infantry Goblin", "High Knight Goblin" , "High Orc"};
+                List<string> mobs = new List<string>();
                 mobs.Sort();
 
-                //Reading Array files
-                StreamReader outputFile = File.OpenText("Weapons.txt");
+                //Reading files
+                inputFile = File.OpenText("Mobs.txt");
+                string str1 = inputFile.ReadLine();
                 
+                while(inputFile.EndOfStream == false)
+                {
+                    String[] tokens = inputFile.ReadLine().Split(':');
+                    foreach (String token in tokens)
+                    {
+                        mobs.Add(token);
+                    }
+                }
+                inputFile.Close();
+
+                inputFile = File.OpenText("Weapons.txt");
+                string str2 = inputFile.ReadLine();
+
+                while (inputFile.EndOfStream == false)
+                {
+                    String[] tokens = inputFile.ReadLine().Split(':');
+                    foreach (String token in tokens)
+                    {
+                        weapons.Add(token);
+                    }
+                }
+                inputFile.Close();
+
+                inputFile = File.OpenText("Treasures.txt");
+                string str3 = inputFile.ReadLine();
+
+                while (inputFile.EndOfStream == false)
+                {
+                    String[] tokens = inputFile.ReadLine().Split(':');
+                    foreach (String token in tokens)
+                    {
+                        treasures.Add(token);
+                    }
+                }
+                inputFile.Close();
+
+                //inputFile = File.OpenText("Rooms.txt");
+                //string str4 = inputFile.ReadLine();
+
+                //while (inputFile.EndOfStream == false)
+                //{
+                //    String[] tokens = inputFile.ReadLine().Split(':');
+                //    foreach (String token in tokens)
+                //    {
+                //        rooms.Add(token);
+                //    }
+                //}
+                //inputFile.Close();
+
+                inputFile = File.OpenText("Potions.txt");
+                string str5 = inputFile.ReadLine();
+
+                while (inputFile.EndOfStream == false)
+                {
+                    String[] tokens = inputFile.ReadLine().Split(':');
+                    foreach (String token in tokens)
+                    {
+                        potions.Add(token);
+                    }
+                }
+                inputFile.Close();
+
+                inputFile = File.OpenText("Items.txt");
+                string str6 = inputFile.ReadLine();
+
+                while (inputFile.EndOfStream == false)
+                {
+                    String[] tokens = inputFile.ReadLine().Split(':');
+                    foreach (String token in tokens)
+                    {
+                        items.Add(token);
+                    }
+
+                }
+                inputFile.Close();
                 bool exit = false;
 
                 //Getting player information
