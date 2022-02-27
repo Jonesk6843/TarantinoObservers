@@ -20,11 +20,16 @@ namespace ConsoleUI
             try
             {
                 //variables
+                bool exit = false;
                 int steps = 0;
                 StreamReader inputFile;
+                StreamWriter outputFile;
+
+                //Creating Arrays
+                string[] userInfo = new string[3];
+                string[] rooms = new string[5];
 
                 //Creating Lists
-                string[] rooms = new string[5];
                 List<string> weapons = new List<string>();
                 weapons.Sort();
                 List<string> potions = new List<string>();
@@ -37,19 +42,21 @@ namespace ConsoleUI
                 mobs.Sort();
 
                 //Reading files
-                inputFile = File.OpenText("Mobs.txt");
-                string str1 = inputFile.ReadLine();
                 
-                while(inputFile.EndOfStream == false)
+                //Rooms
+                inputFile = File.OpenText("Rooms.txt");
+                string str4 = inputFile.ReadLine();
+                while (inputFile.EndOfStream == false)
                 {
                     String[] tokens = inputFile.ReadLine().Split(':');
                     foreach (String token in tokens)
                     {
-                        mobs.Add(token);
+                        rooms.Add(token);
                     }
                 }
                 inputFile.Close();
-
+                
+                //Weapons
                 inputFile = File.OpenText("Weapons.txt");
                 string str2 = inputFile.ReadLine();
 
@@ -62,36 +69,10 @@ namespace ConsoleUI
                     }
                 }
                 inputFile.Close();
-
-                inputFile = File.OpenText("Treasures.txt");
-                string str3 = inputFile.ReadLine();
-
-                while (inputFile.EndOfStream == false)
-                {
-                    String[] tokens = inputFile.ReadLine().Split(':');
-                    foreach (String token in tokens)
-                    {
-                        treasures.Add(token);
-                    }
-                }
-                inputFile.Close();
-
-                //inputFile = File.OpenText("Rooms.txt");
-                //string str4 = inputFile.ReadLine();
-
-                //while (inputFile.EndOfStream == false)
-                //{
-                //    String[] tokens = inputFile.ReadLine().Split(':');
-                //    foreach (String token in tokens)
-                //    {
-                //        rooms.Add(token);
-                //    }
-                //}
-                //inputFile.Close();
-
+                
+                //Potions
                 inputFile = File.OpenText("Potions.txt");
                 string str5 = inputFile.ReadLine();
-
                 while (inputFile.EndOfStream == false)
                 {
                     String[] tokens = inputFile.ReadLine().Split(':');
@@ -102,9 +83,22 @@ namespace ConsoleUI
                 }
                 inputFile.Close();
 
+                //Treasures
+                inputFile = File.OpenText("Treasures.txt");
+                string str3 = inputFile.ReadLine();
+                while (inputFile.EndOfStream == false)
+                {
+                    String[] tokens = inputFile.ReadLine().Split(':');
+                    foreach (String token in tokens)
+                    {
+                        treasures.Add(token);
+                    }
+                }
+                inputFile.Close();
+
+                //Items
                 inputFile = File.OpenText("Items.txt");
                 string str6 = inputFile.ReadLine();
-
                 while (inputFile.EndOfStream == false)
                 {
                     String[] tokens = inputFile.ReadLine().Split(':');
@@ -115,21 +109,35 @@ namespace ConsoleUI
 
                 }
                 inputFile.Close();
-                bool exit = false;
+
+                //Mobs
+                inputFile = File.OpenText("Mobs.txt");
+                string str1 = inputFile.ReadLine();
+                while (inputFile.EndOfStream == false)
+                {
+                    String[] tokens = inputFile.ReadLine().Split(':');
+                    foreach (String token in tokens)
+                    {
+                        mobs.Add(token);
+                    }
+                }
+                inputFile.Close();
 
                 //Getting player information
                 Console.WriteLine("Greetings, Observer!");
 
                 Console.WriteLine("What is your name? >");
-                string userInput = Console.ReadLine();
-                Console.WriteLine(userInput + ", a name that will ring across the land!");
+                string nameInput = Console.ReadLine();
+                Console.WriteLine(nameInput + ". A name that will ring across the land!");
                 Console.WriteLine("This is your observer handbook. Create a password so that only you may access it's contents. >");
                 string passwordInput = Console.ReadLine();
                 Console.WriteLine("Keep that password safe, okay?");
-                Console.WriteLine("Finally, what class of Observer are you? A Gunslinger, Witch, or Battle-ready Observer? >");
+                Console.WriteLine("Finally, what class of Observer are you? A (Gunslinger), (Witch), or (standard) Observer? >");
                 string classInput = Console.ReadLine();
-                Console.WriteLine("Finalized! You are now officially an Observer of the Tarantino Family! Now get out there and observe some monsters!");
+                
+                    Console.WriteLine("Finalized! You are now officially an Observer of the Tarantino Family! Now get out there and observe some monsters!");
                 Console.WriteLine("Remember! Communication amongst monsters is key!");
+                
                 //Main Menu
                 while (exit == false)
                 {
