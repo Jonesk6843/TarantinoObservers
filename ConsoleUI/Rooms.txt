@@ -1,5 +1,0 @@
-Name: Entrance 
-Name: Abandoned Lobby Room
-Name: Hallway
-Name: Hallway #2
-Name: King's Quarters

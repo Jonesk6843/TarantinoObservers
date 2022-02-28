@@ -1,4 +1,0 @@
-name:Lance of the Round Table
-name:Shield of the Round Table
-name:Broken Sword
-name:Hammer of the High Orc
