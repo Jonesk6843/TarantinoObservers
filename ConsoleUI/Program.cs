@@ -21,12 +21,13 @@ namespace ConsoleUI
             {
                 //variables
                 bool exit = false;
+                bool advance = false;
                 int steps = 0;
                 StreamReader inputFile;
                 StreamWriter outputFile;
 
                 //Creating Arrays
-                string[] userInfo = new string[3];
+                string[] playerInfo = new string[1];
 
                 //Creating Lists
                 List<string> rooms = new List<string>();
@@ -100,9 +101,9 @@ namespace ConsoleUI
                 Console.WriteLine("This is your observer handbook. Create a password so that only you may access it's contents. >");
                 string passwordInput = Console.ReadLine();
                 Console.WriteLine("Keep that password safe, okay?");
-                Console.WriteLine("Finally, what class of Observer are you? A (Gunslinger), (Witch), or (standard) Observer? >");
+                Console.WriteLine("Finally, what class of Observer are you? A (Gunslinger), (Witch), or (standard)? >");
                 string classInput = Console.ReadLine();
-                
+               
                 Console.WriteLine("Finalized! You are now officially an Observer of the Tarantino Family! Now get out there and observe some monsters!");
                 Console.WriteLine("Remember! Communication amongst monsters is key!");
                 
@@ -116,7 +117,8 @@ namespace ConsoleUI
                     Console.WriteLine("4.) Display Treasures");
                     Console.WriteLine("5.) Display Items");
                     Console.WriteLine("6.) Display Mobs");
-                    Console.WriteLine("7.) Exit");
+                    Console.WriteLine("7.) Display Player");
+                    Console.WriteLine("8.) Exit");
                     Console.Write("Make your choice, Observer. >");
                     string input = Console.ReadLine();
 
@@ -165,6 +167,15 @@ namespace ConsoleUI
                             Console.WriteLine();
                             break;
                         case "7":
+                            foreach (string val in playerInfo)
+                            {
+                                Console.WriteLine("You're name is:" + nameInput);
+                                Console.WriteLine("You're password is:" + passwordInput);
+                                Console.WriteLine("You're class is:" + classInput);
+                            }
+                            Console.WriteLine();
+                            break;
+                        case "8":
                             exit = true;
                             break;
                         case "rooms":
@@ -204,6 +215,13 @@ namespace ConsoleUI
                             break;
                         case "mobs":
                             foreach (string val in mobs)
+                            {
+                                Console.WriteLine(val);
+                            }
+                            Console.WriteLine();
+                            break;
+                        case "player":
+                            foreach (string val in playerInfo)
                             {
                                 Console.WriteLine(val);
                             }
