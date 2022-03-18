@@ -46,5 +46,13 @@
     <Compile Include="MovementMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Items.txt" />
+    <Content Include="Mobs.txt" />
+    <Content Include="Potions.txt" />
+    <Content Include="Rooms.txt" />
+    <Content Include="Treasures.txt" />
+    <Content Include="Weapons.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

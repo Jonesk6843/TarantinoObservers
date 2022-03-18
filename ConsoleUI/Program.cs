@@ -20,8 +20,10 @@ namespace ConsoleUI
         {
             try
             {
-                //Main Menu
+                //Introduction
                 Introductions.WelcomeUser();
+
+                //Main Menu
                 MovementMenu.UserMenu();
                 
             }

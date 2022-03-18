@@ -12,7 +12,6 @@ namespace TarantinoObserversLibrary
         public static void WelcomeUser()
         {
             //Declaring variables
-            
             StreamWriter outputFile;
 
             //Getting player information

@@ -3,18 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace TarantinoObserversLibrary
 {
     public class MovementMenu
     {
-        public static void UserMenu(ref string rooms)
+        public static void UserMenu()
         {
             try
             {
                 //Variables
                 int steps = 0;
                 bool exit = false;
+                StreamReader inputFile;
+
+                //Creating room list
+                List<string> rooms = new List<string>();
+
+                // Reading Room file
+                 inputFile = File.OpenText("Rooms.txt");
+                while (inputFile.EndOfStream == false)
+                {
+                    rooms.Add(inputFile.ReadLine());
+                }
+                inputFile.Close();
 
                 //main menu
                 while (exit == false)
@@ -29,9 +42,9 @@ namespace TarantinoObserversLibrary
                     switch (input.ToLower())
                     {
                         case "1":
-                            if (steps != 0)
+                            if (steps != 4)
                             {
-                                steps--;
+                                steps++;
                                 Console.WriteLine();
                             }
                             else
@@ -42,9 +55,9 @@ namespace TarantinoObserversLibrary
                             break;
 
                         case "2":
-                            if (steps != 4)
+                            if (steps != 0)
                             {
-                                steps++;
+                                steps--;
                                 Console.WriteLine();
                             }
                             else
@@ -56,7 +69,7 @@ namespace TarantinoObserversLibrary
 
                         case "3":
                             {
-                                Console.WriteLine("Not built yet...");
+                                CombatMenu.BattleMenu();
                                 Console.WriteLine();
                             }
                             break;
@@ -78,7 +91,7 @@ namespace TarantinoObserversLibrary
                             }
                             break;
 
-                        case "South":
+                        case "south":
                             if (steps != 0)
                             {
                                 steps--;
@@ -91,9 +104,9 @@ namespace TarantinoObserversLibrary
                             }
                             break;
 
-                        case "Combat":
+                        case "attack":
                             {
-                                Console.WriteLine("Not built yet...");
+                                CombatMenu.BattleMenu();
                                 Console.WriteLine();
                             }
                             break;
