@@ -2,7 +2,7 @@
 * 2/10/22
 * CSC 153
 * Kent Jones Jr
-* A text adventure of the first level of the Tarantino Observers.
+* A text adventure of the first area of the Tarantino Observers.
 */
 using System;
 using System.Collections.Generic;
@@ -25,7 +25,6 @@ namespace ConsoleUI
 
                 //Main Menu
                 MovementMenu.UserMenu();
-                
             }
             catch (Exception ex)
             {

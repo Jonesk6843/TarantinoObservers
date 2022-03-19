@@ -15,7 +15,9 @@ namespace TarantinoObserversLibrary
             {
                 //Variables
                 int steps = 0;
+                int currentRoom = 1;
                 bool exit = false;
+                int hitpoints = 0;
                 StreamReader inputFile;
 
                 //Creating room list
@@ -32,7 +34,7 @@ namespace TarantinoObserversLibrary
                 //main menu
                 while (exit == false)
                 {
-                    Console.WriteLine($"Current Location - {rooms[steps]}");
+                    Console.WriteLine(currentRoom + $". {rooms[steps]}");
                     Console.WriteLine("1.) Move North");
                     Console.WriteLine("2.) Move South");
                     Console.WriteLine("3.) Attack");
@@ -45,6 +47,7 @@ namespace TarantinoObserversLibrary
                             if (steps != 4)
                             {
                                 steps++;
+                                currentRoom++;
                                 Console.WriteLine();
                             }
                             else
@@ -58,6 +61,7 @@ namespace TarantinoObserversLibrary
                             if (steps != 0)
                             {
                                 steps--;
+                                currentRoom--;
                                 Console.WriteLine();
                             }
                             else
@@ -69,7 +73,7 @@ namespace TarantinoObserversLibrary
 
                         case "3":
                             {
-                                CombatMenu.BattleMenu();
+                                CombatMenu.BattleMenu(ref hitpoints);
                                 Console.WriteLine();
                             }
                             break;
@@ -82,6 +86,7 @@ namespace TarantinoObserversLibrary
                             if (steps != 4)
                             {
                                 steps++;
+                                currentRoom++;
                                 Console.WriteLine();
                             }
                             else
@@ -95,6 +100,7 @@ namespace TarantinoObserversLibrary
                             if (steps != 0)
                             {
                                 steps--;
+                                currentRoom--;
                                 Console.WriteLine();
                             }
                             else
@@ -106,7 +112,7 @@ namespace TarantinoObserversLibrary
 
                         case "attack":
                             {
-                                CombatMenu.BattleMenu();
+                                CombatMenu.BattleMenu(ref hitpoints);
                                 Console.WriteLine();
                             }
                             break;

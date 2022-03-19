@@ -26,7 +26,7 @@ namespace TarantinoObserversLibrary
             string passwordInput = Console.ReadLine();
             outputFile.WriteLine("Your password is: " + passwordInput);
             Console.WriteLine("Keep that password safe, okay?");
-            Console.WriteLine("Finally, what class of Observer are you? A (Gunslinger), (Witch), or (standard)? >");
+            Console.WriteLine("Finally, what class of Observer are you? (Offensive), (NoteTaker), or (Lonewolf)? >");
             string classInput = Console.ReadLine();
             outputFile.WriteLine("Your Class is:" + classInput);
 
