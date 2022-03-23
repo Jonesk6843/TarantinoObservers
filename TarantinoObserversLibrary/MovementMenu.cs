@@ -24,7 +24,7 @@ namespace TarantinoObserversLibrary
                 List<string> rooms = new List<string>();
 
                 // Reading Room file
-                 inputFile = File.OpenText("Rooms.txt");
+                inputFile = File.OpenText("Rooms.txt");
                 while (inputFile.EndOfStream == false)
                 {
                     rooms.Add(inputFile.ReadLine());
@@ -39,7 +39,8 @@ namespace TarantinoObserversLibrary
                     Console.WriteLine("2.) Move South");
                     Console.WriteLine("3.) Attack");
                     Console.WriteLine("4.) Exit");
-                    Console.Write("Make your choice, Observer. >");
+                    Console.WriteLine("Make your choice, Observer.");
+                    Console.Write("> ");
                     string input = Console.ReadLine();
                     switch (input.ToLower())
                     {
@@ -52,7 +53,7 @@ namespace TarantinoObserversLibrary
                             }
                             else
                             {
-                                Console.WriteLine("Maybe I missed something...");
+                                Console.WriteLine("Looks like a dead end...");
                                 Console.WriteLine();
                             }
                             break;
@@ -66,7 +67,7 @@ namespace TarantinoObserversLibrary
                             }
                             else
                             {
-                                Console.WriteLine("Looks like a dead end.");
+                                Console.WriteLine("I can't leave yet!");
                                 Console.WriteLine();
                             }
                             break;
@@ -105,7 +106,7 @@ namespace TarantinoObserversLibrary
                             }
                             else
                             {
-                                Console.WriteLine("Maybe I missed something...");
+                                Console.WriteLine("I can't leave yet!");
                                 Console.WriteLine();
                             }
                             break;
