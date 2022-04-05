@@ -57,6 +57,8 @@ namespace TarantinoObserversLibrary
                 else
                 {
                     Console.WriteLine("Sorry, you password is missing something.");
+                    upperCase = 0;
+                    lowerCase = 0;
                     Console.WriteLine();
                 }
             }
