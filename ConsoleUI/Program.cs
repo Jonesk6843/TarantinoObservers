@@ -26,12 +26,12 @@ namespace ConsoleUI
                 //Main Menu
                 MovementMenu.UserMenu();
 
-                //Room myRoom = new Room();
-                //Room yourRoom = new Room(501, "Entrance", "The entrance to this castle is battered. Maybe from a battle long passed. Amidst the rubble lies broken swords, tattered armor, and shattered frames. By the looks of undamaged " +
-                //    "weapons piled in the corner of the entrance, you may not be the first one here…and definitely not the last…");
-
-                //Console.WriteLine(yourRoom.description);
-                //Console.ReadLine();
+                Room myRoom = new Room();
+                Room yourRoom = new Room(501, "Entrance", "The entrance to this castle is battered. Maybe from a battle long passed. Amidst the rubble lies broken swords, tattered armor, and shattered frames. By the looks of undamaged " +
+                    "weapons piled in the corner of the entrance, you may not be the first one here…and definitely not the last…");
+                Console.WriteLine(yourRoom.name);
+                Console.WriteLine(yourRoom.description);
+                Console.ReadLine();
             }
             catch (Exception ex)
             {

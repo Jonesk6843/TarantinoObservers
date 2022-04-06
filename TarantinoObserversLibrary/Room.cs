@@ -34,6 +34,12 @@ namespace TarantinoObserversLibrary
             get { return _description; }
             set { _description = value; }
         }
+
+        public string name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
         //methods
     }
 }
