@@ -19,7 +19,7 @@ namespace TarantinoObserversLibrary
             int upperCase = 0;
             int lowerCase = 0;
             int specialCase = 0;
-            string specialCases = @"%!@#$%^&*()?/>.<,:;'\|}]{[_~`+=-" + "\"";
+            //string specialCases = @"%!@#$%^&*()?/>.<,:;'\|}]{[_~`+=-" + "\"";
 
             //Getting player information
             //name
@@ -51,15 +51,15 @@ namespace TarantinoObserversLibrary
                         lowerCase++;
                     }
                 }
-                if (upperCase >= 1 && lowerCase >= 1 && specialCase >=1)
+                if (upperCase >= 1 && lowerCase >= 1)
                     {
                         outputFile.WriteLine("Your password is: " + passwordInput);
                         passCheck = true;
                     }
-                if (passwordInput.Contains(specialCases))
-                    {
-                        specialCase++;
-                    }
+                //if (passwordInput.Contains(specialCases))
+                //    {
+                //        specialCase++;
+                //    }
                 else
                 {
                     Console.WriteLine("Sorry, you password is missing something.");

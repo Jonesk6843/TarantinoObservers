@@ -34,55 +34,12 @@ namespace TarantinoObserversLibrary
                 //main menu
                 while (exit == false)
                 {
-                    Console.WriteLine(currentRoom + $". {rooms[steps]}");
-                    Console.WriteLine("1.) Move North");
-                    Console.WriteLine("2.) Move South");
-                    Console.WriteLine("3.) Attack");
-                    Console.WriteLine("4.) Exit");
                     Console.WriteLine("Make your choice, Observer.");
+                    Console.WriteLine("Hp: 100 MP: 50 type (help) for controls.");
                     Console.Write("> ");
                     string input = Console.ReadLine();
                     switch (input.ToLower())
                     {
-                        case "1":
-                            if (steps != 4)
-                            {
-                                steps++;
-                                currentRoom++;
-                                Console.WriteLine();
-                            }
-                            else
-                            {
-                                Console.WriteLine("Looks like a dead end...");
-                                Console.WriteLine();
-                            }
-                            break;
-
-                        case "2":
-                            if (steps != 0)
-                            {
-                                steps--;
-                                currentRoom--;
-                                Console.WriteLine();
-                            }
-                            else
-                            {
-                                Console.WriteLine("I can't leave yet!");
-                                Console.WriteLine();
-                            }
-                            break;
-
-                        case "3":
-                            {
-                                CombatMenu.BattleMenu(ref hitpoints);
-                                Console.WriteLine();
-                            }
-                            break;
-
-                        case "4":
-                            exit = true;
-                            break;
-
                         case "north":
                             if (steps != 4)
                             {
@@ -119,7 +76,20 @@ namespace TarantinoObserversLibrary
                             break;
 
                         case "exit":
+                            Console.WriteLine("Until next time, Observer.");
+                            Console.WriteLine("Press Enter to exit the program.");
+                            Console.ReadLine();
                             exit = true;
+                            break;
+                        case "help":
+                            {
+                                Console.WriteLine("To move, type north, south, east, or west.");
+                                Console.WriteLine("To attack, type Attack.");
+                                Console.WriteLine("If you would like to exit the program, type Exit.");
+                                Console.WriteLine("Casing does not matter.");
+                                Console.WriteLine("Press Enter to exit help menu.");
+                                Console.ReadLine();
+                            }
                             break;
                         default:
                             {
