@@ -12,6 +12,7 @@ namespace TarantinoObserversLibrary
         private int _id;
         private string _name;
         private string _description;
+        private string _exits;
 
         //constructor
         public Room()
@@ -19,6 +20,7 @@ namespace TarantinoObserversLibrary
             _id = 0;
             _name = "";
             _description = "";
+            List<String> _exits = new List<String>();
         }
 
         public Room (int id, string name, string description)
@@ -26,9 +28,15 @@ namespace TarantinoObserversLibrary
             _id = id;
             _name = name;
             _description = description;
+
         }
 
         //properties
+        public int ID
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
         public string description
         {
             get { return _description; }
@@ -40,6 +48,7 @@ namespace TarantinoObserversLibrary
             get { return _name; }
             set { _name = value; }
         }
+
         //methods
     }
 }

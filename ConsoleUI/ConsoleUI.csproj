@@ -45,20 +45,13 @@
   <ItemGroup>
     <Compile Include="CombatMenu.cs" />
     <Compile Include="Introductions.cs" />
+    <Compile Include="LoadFiles.cs" />
     <Compile Include="MovementMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Items.txt" />
-    <Content Include="Mobs.txt" />
-    <Content Include="Potions.txt" />
-    <Content Include="Rooms.txt" />
-    <Content Include="Treasures.txt" />
-    <Content Include="Weapons.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TarantinoObserversLibrary\TarantinoObserversLibrary.csproj">

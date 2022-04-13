@@ -109,9 +109,10 @@ namespace TarantinoObserversLibrary
                 }
                 outputFile.WriteLine("Your Class is:" + classInput);
             }
+            outputFile.Close();
             Console.WriteLine("Finalized! You are now officially an Observer of the Tarantino Family! Now get out there and observe some monsters!");
             Console.WriteLine("Remember! Communication amongst monsters is key!");
-            outputFile.Close();
+            Console.WriteLine();
         }
     }
 }
