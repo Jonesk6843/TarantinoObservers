@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DemoWorld.cs" />
     <Compile Include="Item.cs" />
+    <Compile Include="Load.cs" />
     <Compile Include="LoadFiles.cs" />
     <Compile Include="Mob.cs" />
     <Compile Include="Player.cs" />

@@ -20,26 +20,35 @@ namespace ConsoleUI
         {
             try
             {
-                //Main Menu
-                Console.WriteLine("Are you new to Tarantino Observers?");
-                string userInput = Console.ReadLine();
+                //load the game world
+                Load.loadRoom();
 
-                if (userInput == "yes")
+                foreach (Room room in DemoWorld.rooms)
                 {
-                    //Introduction
-                    Introductions.WelcomeUser();
+                    Console.WriteLine(room.ID);
                 }
-                else if (userInput == "no")
-                {
+                Console.ReadLine();
+                
+                ////Main Menu
+                //Console.WriteLine("Are you new to Tarantino Observers?");
+                //string userInput = Console.ReadLine();
+
+                //if (userInput == "yes")
+                //{
+                //    //Introduction
+                //    Introductions.WelcomeUser();
+                //}
+                //else if (userInput == "no")
+                //{
                     
-                }
+                //}
 
-                else
-                {
-                    Console.WriteLine("I'm sorry, come again?");
-                }    
+                //else
+                //{
+                //    Console.WriteLine("I'm sorry, come again?");
+                //}    
 
-                MovementMenu.UserMenu();
+                //MovementMenu.UserMenu();
             }
             catch (Exception ex)
             {
