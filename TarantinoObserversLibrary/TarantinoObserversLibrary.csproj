@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Item.cs" />
-    <Compile Include="loadWorld.cs" />
+    <Compile Include="LoadFiles.cs" />
     <Compile Include="Mob.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Potion.cs" />
@@ -52,12 +52,15 @@
     <Compile Include="Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Items.txt" />
-    <Content Include="Mobs.txt" />
-    <Content Include="Potions.txt" />
     <Content Include="Rooms.txt" />
-    <Content Include="Treasures.txt" />
-    <Content Include="Weapons.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LoadFiles\Items.csv" />
+    <None Include="LoadFiles\Mobs.csv" />
+    <None Include="LoadFiles\Potions.csv" />
+    <None Include="LoadFiles\Rooms.csv" />
+    <None Include="LoadFiles\Treasures.csv" />
+    <None Include="LoadFiles\Weapons.csv" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

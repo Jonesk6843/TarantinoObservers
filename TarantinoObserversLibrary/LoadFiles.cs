@@ -27,8 +27,8 @@ namespace ConsoleUI
                 File.OpenText($"Observer_Cirtificate.txt");
 
                 // ask for password
-                while (transfer == false)
-                {
+                //while (transfer == false)
+                //{
                 //    Console.WriteLine("What is thou's name?");
                 //    Console.Write("> ");
                 //    string userName = Console.ReadLine();

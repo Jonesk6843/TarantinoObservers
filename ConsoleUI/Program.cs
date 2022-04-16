@@ -31,8 +31,7 @@ namespace ConsoleUI
                 }
                 else if (userInput == "no")
                 {
-                    //load file
-                    LoadFiles.loadFile();
+                    
                 }
 
                 else
