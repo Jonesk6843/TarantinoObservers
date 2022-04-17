@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using TarantinoObserversLibrary;
 
-namespace TarantinoObserversLibrary
+namespace ConsoleUI
 {
     public class MovementMenu
     {
@@ -34,7 +35,12 @@ namespace TarantinoObserversLibrary
                 //main menu
                 while (exit == false)
                 {
-                    Console.WriteLine(DemoWorld.rooms[steps]);
+                    foreach (Room room in DemoWorld.rooms)
+                    {
+                        Console.WriteLine(room.name);
+                        Console.WriteLine(room.description);
+                    }
+
                     Console.WriteLine("Make your choice, Observer.");
                     Console.WriteLine("Hp: 100 MP: 50 type (help) for controls.");
                     Console.Write("> ");

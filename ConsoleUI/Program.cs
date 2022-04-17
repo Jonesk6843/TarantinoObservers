@@ -28,7 +28,7 @@ namespace ConsoleUI
                 Load.loadPotions();
                 Load.loadMobs();
 
-                ////Main Menu
+                //Main Menu
                 //Console.WriteLine("Are you new to Tarantino Observers?");
                 //string userInput = Console.ReadLine();
 
@@ -48,12 +48,6 @@ namespace ConsoleUI
                 //}
 
                 MovementMenu.UserMenu();
-
-                //foreach (Room room in DemoWorld.rooms)
-                //{
-                //    Console.WriteLine(room.description);
-                //}
-                //Console.ReadLine();
 
             }
             catch (Exception ex)
