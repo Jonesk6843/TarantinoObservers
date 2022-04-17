@@ -37,7 +37,7 @@ namespace TarantinoObserversLibrary
                     if (firstLine != true)
                     {
                         //Tokens in order (ID, Name, Description, Damage Type, price, Damage)
-                        DemoWorld.rooms.Add(new Weapon(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4], tokens[5]));
+                        DemoWorld.weapons.Add(new Weapon(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4], tokens[5]));
                     }
                     else
                     {
@@ -55,7 +55,7 @@ namespace TarantinoObserversLibrary
                     if (firstLine != true)
                     {
                         //Tokens in order (ID, Name, Race, Class, HP, AC, Weapon, Inventory, Description)
-                        DemoWorld.rooms.Add(new Mob(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4], tokens[5], tokens[6], tokens[7], tokens[8]));
+                        DemoWorld.mobs.Add(new Mob(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4], tokens[5], tokens[6], tokens[7], tokens[8]));
                     }
                     else
                     {
@@ -112,7 +112,7 @@ namespace TarantinoObserversLibrary
                     if (firstLine != true)
                     {
                         //Tokens in order (ID,Name,Description,Item Type,Price)
-                        DemoWorld.item.Add(new Item(tokens[0], tokens[1], tokens[2], tokens[3]));
+                        DemoWorld.item.Add(new Item(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4]));
                     }
                     else
                     {

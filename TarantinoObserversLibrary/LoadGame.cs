@@ -7,9 +7,9 @@ using System.IO;
 
 namespace ConsoleUI
 {
-    class LoadFiles
+    class LoadGame
     {
-        public static void loadFile()
+        public static void loadGame()
         {
             try
             {

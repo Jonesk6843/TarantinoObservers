@@ -22,13 +22,12 @@ namespace ConsoleUI
             {
                 //load the game world
                 Load.loadRoom();
+                Load.loadItems();
+                Load.loadTreasures();
+                Load.loadWeapons();
+                Load.loadPotions();
+                Load.loadMobs();
 
-                foreach (Room room in DemoWorld.rooms)
-                {
-                    Console.WriteLine(room.description);
-                }
-                Console.ReadLine();
-                
                 ////Main Menu
                 //Console.WriteLine("Are you new to Tarantino Observers?");
                 //string userInput = Console.ReadLine();
@@ -40,15 +39,22 @@ namespace ConsoleUI
                 //}
                 //else if (userInput == "no")
                 //{
-                    
+
                 //}
 
                 //else
                 //{
                 //    Console.WriteLine("I'm sorry, come again?");
-                //}    
+                //}
 
-                //MovementMenu.UserMenu();
+                MovementMenu.UserMenu();
+
+                //foreach (Room room in DemoWorld.rooms)
+                //{
+                //    Console.WriteLine(room.description);
+                //}
+                //Console.ReadLine();
+
             }
             catch (Exception ex)
             {

@@ -34,6 +34,7 @@ namespace TarantinoObserversLibrary
                 //main menu
                 while (exit == false)
                 {
+                    Console.WriteLine(DemoWorld.rooms[steps]);
                     Console.WriteLine("Make your choice, Observer.");
                     Console.WriteLine("Hp: 100 MP: 50 type (help) for controls.");
                     Console.Write("> ");

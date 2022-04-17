@@ -44,7 +44,7 @@
     <Compile Include="DemoWorld.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="Load.cs" />
-    <Compile Include="LoadFiles.cs" />
+    <Compile Include="LoadGame.cs" />
     <Compile Include="Mob.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Potion.cs" />

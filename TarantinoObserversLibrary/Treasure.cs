@@ -9,26 +9,29 @@ namespace TarantinoObserversLibrary
     public class Treasure
     {
         //Fields
-        private int _id;
+        private string _id;
         private string _name;
         private string _description;
-        private int _price;
+        private string _price;
+        private string _questItem;
 
         //constructor
         public Treasure()
         {
-            _id = 0;
+            _id = " ";
             _name = "";
             _description = "";
-            _price = 0;
+            _price = " ";
+            _questItem = " ";
         }
 
-        public Treasure(int id, string name, string description, int price)
+        public Treasure(string id, string name, string description, string price, string questItem)
         {
             _id = id;
             _name = name;
             _description = description;
             _price = price;
+            _questItem = questItem;
         }
         //properties
 

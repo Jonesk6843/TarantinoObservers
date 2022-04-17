@@ -9,26 +9,29 @@ namespace TarantinoObserversLibrary
     public class Potion
     {
         //Fields
-        private int _id;
+        private string _id;
         private string _name;
-        private int _price;
-        private int _valueChange;
+        private string _price;
+        private string _valueChange;
+        private string _description;
 
         //constructor
         public Potion()
         {
-            _id = 0;
+            _id = " ";
             _name = "";
-            _price = 0;
-            _valueChange = 0;
+            _price = " ";
+            _valueChange = " ";
+            _description = " ";
         }
 
-        public Potion (int id, string name, int price, int valueChange)
+        public Potion (string id, string name, string description, string price, string valueChange)
         {
             _id = id;
             _name = name;
             _price = price;
             _valueChange = valueChange;
+            _description = description;
         }
 
         //properties

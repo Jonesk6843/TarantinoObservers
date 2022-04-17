@@ -9,26 +9,29 @@ namespace TarantinoObserversLibrary
     public class Item
     {
         //Fields
-        private int _id;
+        private string _id;
         private string _name;
         private string _description;
-        private int _price;
+        private string _price;
+        private string _type;
 
         //constructor
         public Item()
         {
-            _id = 0;
+            _id = " ";
             _name = "";
             _description = "";
-            _price = 0;
+            _price = " ";
+            _type = " ";
         }
 
-        public Item(int id, string name, string description, int price)
+        public Item(string id, string name, string description, string price, string type)
         {
             _id = id;
             _name = name;
             _description = description;
             _price = price;
+            _type = type;
         }
 
         //properties

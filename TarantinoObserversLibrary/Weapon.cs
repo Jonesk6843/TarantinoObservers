@@ -9,25 +9,25 @@ namespace TarantinoObserversLibrary
     public class Weapon
     {
         //Fields
-        private int _id;
+        private string _id;
         private string _name;
         private string _description;
         private string _damageType;
-        private int _price;
-        private int _damage;
+        private string _price;
+        private string _damage;
 
         //constructor
         public Weapon()
         {
-            _id = 0;
+            _id = " ";
             _name = "";
             _description = "";
             _damageType = "";
-            _price = 0;
-            _damage = 0;
+            _price = " ";
+            _damage = " ";
         }
 
-        public Weapon(int id, string name, string description, string damageType, int price, int damage)
+        public Weapon(string id, string name, string description, string damageType, string price, string damage)
         {
             _id = id;
             _name = name;
