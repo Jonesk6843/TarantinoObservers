@@ -25,7 +25,7 @@ namespace ConsoleUI
 
                 foreach (Room room in DemoWorld.rooms)
                 {
-                    Console.WriteLine(room.ID);
+                    Console.WriteLine(room.description);
                 }
                 Console.ReadLine();
                 
