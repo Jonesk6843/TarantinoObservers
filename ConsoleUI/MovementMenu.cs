@@ -19,32 +19,31 @@ namespace ConsoleUI
                 int currentRoom = 1;
                 bool exit = false;
                 int hitpoints = 0;
-                StreamReader inputFile;
-
-                //Creating room list
-                List<string> rooms = new List<string>();
-
-                // Reading Room file
-                inputFile = File.OpenText("Rooms.txt");
-                while (inputFile.EndOfStream == false)
-                {
-                    rooms.Add(inputFile.ReadLine());
-                }
-                inputFile.Close();
 
                 //main menu
                 while (exit == false)
                 {
-                    foreach (Room room in DemoWorld.rooms)
+                    //Dropping certain mobs at certain steps
+                    if (steps == 3)
                     {
-                        Console.WriteLine(room.name);
+                        foreach (Mob mob in World.mobs)
+                        {
+                            Console.WriteLine($"A {mob.name} stands in your way!");
+                        }
+                    }
+                    //Display player menu
+                    foreach (Room room in World.rooms)
+                    {
+                        Console.WriteLine($"You are in {room.name}");
                         Console.WriteLine(room.description);
                     }
-
                     Console.WriteLine("Make your choice, Observer.");
                     Console.WriteLine("Hp: 100 MP: 50 type (help) for controls.");
                     Console.Write("> ");
                     string input = Console.ReadLine();
+
+                    
+                    //Player input options
                     switch (input.ToLower())
                     {
                         case "north":
@@ -104,7 +103,8 @@ namespace ConsoleUI
                                 Console.WriteLine();
                                 break;
                             }
-                        }
+                    }
+
                 }
             }
             catch (Exception ex)

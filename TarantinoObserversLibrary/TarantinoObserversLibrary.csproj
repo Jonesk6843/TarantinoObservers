@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DemoWorld.cs" />
+    <Compile Include="World.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="Load.cs" />
     <Compile Include="LoadGame.cs" />
@@ -52,9 +52,6 @@
     <Compile Include="Room.cs" />
     <Compile Include="Treasure.cs" />
     <Compile Include="Weapon.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Rooms.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LoadFiles\Items.csv" />

@@ -38,6 +38,38 @@ namespace TarantinoObserversLibrary
         }
 
         //properties
+        public string ID
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+
+        public string name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+        public string description
+        {
+            get { return _description; }
+            set { _description = value; }
+        }
+        public string damageType
+        {
+            get { return _damageType; }
+            set { _id = value; }
+        }
+
+        public string price
+        {
+            get { return _price; }
+            set { _name = value; }
+        }
+        public string damage
+        {
+            get { return _damage; }
+            set { _description = value; }
+        }
 
         //methods
     }

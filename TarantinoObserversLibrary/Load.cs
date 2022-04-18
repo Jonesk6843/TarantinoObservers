@@ -19,7 +19,7 @@ namespace TarantinoObserversLibrary
                     if (firstLine != true)
                     {
                         //Tokens in order (ID, Name, Description)
-                        DemoWorld.rooms.Add(new Room(tokens[0], tokens[1], tokens[2]));
+                        World.rooms.Add(new Room(tokens[0], tokens[1], tokens[2]));
                     }
                     else
                     {
@@ -37,7 +37,7 @@ namespace TarantinoObserversLibrary
                     if (firstLine != true)
                     {
                         //Tokens in order (ID, Name, Description, Damage Type, price, Damage)
-                        DemoWorld.weapons.Add(new Weapon(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4], tokens[5]));
+                        World.weapons.Add(new Weapon(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4], tokens[5]));
                     }
                     else
                     {
@@ -55,7 +55,7 @@ namespace TarantinoObserversLibrary
                     if (firstLine != true)
                     {
                         //Tokens in order (ID, Name, Race, Class, HP, AC, Weapon, Inventory, Description)
-                        DemoWorld.mobs.Add(new Mob(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4], tokens[5], tokens[6], tokens[7], tokens[8]));
+                        World.mobs.Add(new Mob(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4], tokens[5], tokens[6], tokens[7], tokens[8]));
                     }
                     else
                     {
@@ -74,7 +74,7 @@ namespace TarantinoObserversLibrary
                     if (firstLine != true)
                     {
                         //Tokens in order (ID,Name,Description,Value Change,Price)
-                        DemoWorld.potion.Add(new Potion(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4]));
+                        World.potion.Add(new Potion(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4]));
                     }
                     else
                     {
@@ -93,7 +93,7 @@ namespace TarantinoObserversLibrary
                     if (firstLine != true)
                     {
                         //Tokens in order (ID,Name,Description,Quest Item,Price)
-                        DemoWorld.treasure.Add(new Treasure(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4]));
+                        World.treasure.Add(new Treasure(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4]));
                     }
                     else
                     {
@@ -112,7 +112,7 @@ namespace TarantinoObserversLibrary
                     if (firstLine != true)
                     {
                         //Tokens in order (ID,Name,Description,Item Type,Price)
-                        DemoWorld.item.Add(new Item(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4]));
+                        World.item.Add(new Item(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4]));
                     }
                     else
                     {

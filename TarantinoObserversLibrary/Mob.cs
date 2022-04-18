@@ -23,14 +23,14 @@ namespace TarantinoObserversLibrary
         public Mob()
         {
             _id = " ";
-            _name = "";
-            _race = "";
-            _class = "";
+            _name = " ";
+            _race = " ";
+            _class = " ";
             _hp = " ";
             _ap = " ";
-            _weapon = "";
-            _inventory = "";
-            _description = "";
+            _weapon = " ";
+            _inventory = " ";
+            _description = " ";
         }
 
         public Mob(string id, string name, string race, string Class, string hp, string ap, string weapon, string inventory, string description)
@@ -47,7 +47,55 @@ namespace TarantinoObserversLibrary
         }
 
         //properties
+        public string ID
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
 
+        public string name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+        public string description
+        {
+            get { return _description; }
+            set { _description = value; }
+        }
+        public string race
+        {
+            get { return _race; }
+            set { _id = value; }
+        }
+
+        public string Class
+        {
+            get { return _class; }
+            set { _name = value; }
+        }
+        public string hp
+        {
+            get { return _hp; }
+            set { _description = value; }
+        }
+        public string ap
+        {
+            get { return _ap; }
+            set { _id = value; }
+        }
+
+        public string weapon
+        {
+            get { return _weapon; }
+            set { _name = value; }
+        }
+        public string inventory
+        {
+            get { return _inventory; }
+            set { _description = value; }
+        }
         //methods
+
     }
 }
