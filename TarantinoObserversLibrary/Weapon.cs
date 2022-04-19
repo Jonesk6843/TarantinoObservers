@@ -57,18 +57,18 @@ namespace TarantinoObserversLibrary
         public string damageType
         {
             get { return _damageType; }
-            set { _id = value; }
+            set { _damageType = value; }
         }
 
         public string price
         {
             get { return _price; }
-            set { _name = value; }
+            set { _price = value; }
         }
         public string damage
         {
             get { return _damage; }
-            set { _description = value; }
+            set { _damage = value; }
         }
 
         //methods

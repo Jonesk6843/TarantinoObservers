@@ -29,7 +29,7 @@ namespace TarantinoObserversLibrary
             _hp = " ";
             _ap = " ";
             _weapon = " ";
-            _inventory = " ";
+            List<String> _inventory = new List<String>();
             _description = " ";
         }
 
@@ -66,34 +66,34 @@ namespace TarantinoObserversLibrary
         public string race
         {
             get { return _race; }
-            set { _id = value; }
+            set { _race = value; }
         }
 
         public string Class
         {
             get { return _class; }
-            set { _name = value; }
+            set { _class = value; }
         }
         public string hp
         {
             get { return _hp; }
-            set { _description = value; }
+            set { _hp = value; }
         }
         public string ap
         {
             get { return _ap; }
-            set { _id = value; }
+            set { _ap = value; }
         }
 
         public string weapon
         {
             get { return _weapon; }
-            set { _name = value; }
+            set { _weapon = value; }
         }
         public string inventory
         {
             get { return _inventory; }
-            set { _description = value; }
+            set { _inventory = value; }
         }
         //methods
 

@@ -19,6 +19,8 @@ namespace ConsoleUI
                 int currentRoom = 1;
                 bool exit = false;
                 int hitpoints = 0;
+                
+                Player myStats = new Player();  
 
                 //main menu
                 while (exit == false)
@@ -38,7 +40,7 @@ namespace ConsoleUI
                         Console.WriteLine(room.description);
                     }
                     Console.WriteLine("Make your choice, Observer.");
-                    Console.WriteLine("Hp: 100 MP: 50 type (help) for controls.");
+                    Console.WriteLine($"Hp: {myStats.hp} MP: {myStats.ap} |type (help) for controls.");
                     Console.Write("> ");
                     string input = Console.ReadLine();
 

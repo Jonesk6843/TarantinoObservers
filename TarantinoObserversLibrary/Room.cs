@@ -23,11 +23,12 @@ namespace TarantinoObserversLibrary
             List<String> _exits = new List<String>();
         }
 
-        public Room (string id, string name, string description)
+        public Room (string id, string name, string description, string exits)
         {
             _id = id;
             _name = name;
             _description = description;
+            _exits = exits;
 
         }
 
@@ -47,6 +48,11 @@ namespace TarantinoObserversLibrary
         {
             get { return _description; }
             set { _description = value; }
+        }
+        public string exits
+        {
+            get { return _exits; }
+            set { _exits = value; }
         }
 
         //methods

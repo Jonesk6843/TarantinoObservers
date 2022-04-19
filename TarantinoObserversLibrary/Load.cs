@@ -18,8 +18,8 @@ namespace TarantinoObserversLibrary
                     string[] tokens = reader.ReadLine().Split(',');
                     if (firstLine != true)
                     {
-                        //Tokens in order (ID, Name, Description)
-                        World.rooms.Add(new Room(tokens[0], tokens[1], tokens[2]));
+                        //Tokens in order (ID, Name, Description, exits)
+                        World.rooms.Add(new Room(tokens[0], tokens[1], tokens[2], tokens[3]));
                     }
                     else
                     {

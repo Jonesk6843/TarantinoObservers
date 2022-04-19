@@ -53,7 +53,7 @@ namespace TarantinoObserversLibrary
         public string price
         {
             get { return _price; }
-            set { _id = value; }
+            set { _price = value; }
         }
 
         //methods

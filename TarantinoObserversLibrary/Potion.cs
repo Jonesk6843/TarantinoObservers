@@ -54,13 +54,13 @@ namespace TarantinoObserversLibrary
         public string price
         {
             get { return _price; }
-            set { _id = value; }
+            set { _price = value; }
         }
 
         public string valueChange
         {
             get { return _valueChange; }
-            set { _name = value; }
+            set { _valueChange = value; }
         }
 
         //methods
