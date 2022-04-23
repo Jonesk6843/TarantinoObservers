@@ -16,29 +16,19 @@ namespace ConsoleUI
             {
                 //Variables
                 int steps = 0;
-                int currentRoom = 1;
+                int currentRoom = 0;
                 bool exit = false;
                 int hitpoints = 0;
                 
+                //loading player stats
                 Player myStats = new Player();  
 
                 //main menu
                 while (exit == false)
                 {
-                    //Dropping certain mobs at certain steps
-                    if (steps == 3)
-                    {
-                        foreach (Mob mob in World.mobs)
-                        {
-                            Console.WriteLine($"A {mob.name} stands in your way!");
-                        }
-                    }
                     //Display player menu
-                    foreach (Room room in World.rooms)
-                    {
-                        Console.WriteLine($"You are in {room.name}");
-                        Console.WriteLine(room.description);
-                    }
+                    Console.WriteLine($"Currently, you are in the {World.rooms[currentRoom].name}");
+                    Console.WriteLine(World.rooms[currentRoom].description);
                     Console.WriteLine("Make your choice, Observer.");
                     Console.WriteLine($"Hp: {myStats.hp} MP: {myStats.ap} |type (help) for controls.");
                     Console.Write("> ");

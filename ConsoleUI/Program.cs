@@ -29,26 +29,29 @@ namespace ConsoleUI
                 Load.loadMobs();
 
                 //Main Menu
-                //Console.WriteLine("Are you new to Tarantino Observers?");
-                //string userInput = Console.ReadLine();
+                Console.WriteLine("Are you new to Tarantino Observers?");
+                string userInput = Console.ReadLine();
 
-                //if (userInput == "yes")
-                //{
-                //    //Introduction
-                //    Introductions.WelcomeUser();
-                //}
-                //else if (userInput == "no")
-                //{
+                switch (userInput.ToLower())
+                {
+                    case "yes":
+                        {
+                            //Introduction
+                            Introductions.WelcomeUser();
+                            MovementMenu.UserMenu();
+                            break;
+                        }
+                    case "no":
+                        {
 
-                //}
-
-                //else
-                //{
-                //    Console.WriteLine("I'm sorry, come again?");
-                //}
-
-                MovementMenu.UserMenu();
-
+                            break;
+                        }
+                    default:
+                        {
+                            Console.WriteLine("I'm sorry, come again?");
+                            break;
+                        }
+                }
             }
             catch (Exception ex)
             {
