@@ -6,94 +6,35 @@ using System.Threading.Tasks;
 
 namespace TarantinoObserversLibrary
 {
-    public class Mob
+    public class Mob : LivingCreature
     {
         //Fields
-        private string _id;
-        private string _name;
-        private string _race;
-        private string _class;
-        private string _hp;
-        private string _ap;
         private string _weapon;
-        private string _inventory;
-        private string _description;
+        private string _loot;
 
         //constructor
         public Mob()
         {
-            _id = " ";
-            _name = " ";
-            _race = " ";
-            _class = " ";
-            _hp = " ";
-            _ap = " ";
             _weapon = " ";
-            List<String> _inventory = new List<String>();
-            _description = " ";
+            List<String> _loot = new List<String>();
         }
 
-        public Mob(string id, string name, string race, string Class, string hp, string ap, string weapon, string inventory, string description)
+        public Mob(string weapon, string loot)
         {
-            _id = id;
-            _name = name;
-            _race = race;
-            _class = Class;
-            _hp = hp;
-            _ap = ap;
             _weapon = weapon;
-            _inventory = inventory;
-            _description = description;
+            _loot = loot;
         }
 
         //properties
-        public string ID
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
-
-        public string name
-        {
-            get { return _name; }
-            set { _name = value; }
-        }
-        public string description
-        {
-            get { return _description; }
-            set { _description = value; }
-        }
-        public string race
-        {
-            get { return _race; }
-            set { _race = value; }
-        }
-
-        public string Class
-        {
-            get { return _class; }
-            set { _class = value; }
-        }
-        public string hp
-        {
-            get { return _hp; }
-            set { _hp = value; }
-        }
-        public string ap
-        {
-            get { return _ap; }
-            set { _ap = value; }
-        }
-
         public string weapon
         {
             get { return _weapon; }
             set { _weapon = value; }
         }
-        public string inventory
+        public string loot
         {
-            get { return _inventory; }
-            set { _inventory = value; }
+            get { return _loot; }
+            set { _loot = value; }
         }
         //methods
 
