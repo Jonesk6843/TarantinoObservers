@@ -6,54 +6,34 @@ using System.Threading.Tasks;
 
 namespace TarantinoObserversLibrary
 {
-    public class Treasure
+    public class Treasure : Item
     {
         //Fields
-        private string _id;
-        private string _name;
-        private string _description;
-        private string _price;
         private string _questItem;
+        private string _value;
 
         //constructor
         public Treasure()
         {
-            _id = " ";
-            _name = "";
-            _description = "";
-            _price = " ";
             _questItem = " ";
+            _value = "";
         }
 
-        public Treasure(string id, string name, string description, string price, string questItem)
+        public Treasure(string questItem, string value)
         {
-            _id = id;
-            _name = name;
-            _description = description;
-            _price = price;
             _questItem = questItem;
+            _value = value;
         }
         //properties
-        public string ID
+        public string questItem
         {
-            get { return _id; }
-            set { _id = value; }
+            get { return _questItem; }
+            set { _questItem = value; }
         }
-
-        public string name
+        public string value
         {
-            get { return _name; }
-            set { _name = value; }
-        }
-        public string description
-        {
-            get { return _description; }
-            set { _description = value; }
-        }
-        public string price
-        {
-            get { return _price; }
-            set { _price = value; }
+            get { return _value; }
+            set { _value = value; }
         }
 
         //methods

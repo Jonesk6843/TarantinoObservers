@@ -26,16 +26,16 @@ namespace ConsoleUI
 
                 File.OpenText($"Observer_Cirtificate.txt");
 
-                // ask for password
-                //while (transfer == false)
-                //{
-                //    Console.WriteLine("What is thou's name?");
-                //    Console.Write("> ");
-                //    string userName = Console.ReadLine();
-                //    Console.WriteLine("What is thou's password?");
-                //    Console.Write("> ");
-                //    string userPass = Console.ReadLine();
-                //}
+                //ask for password
+                while (transfer == false)
+                    {
+                        Console.WriteLine("What is thou's name?");
+                        Console.Write("> ");
+                        userName = Console.ReadLine();
+                        Console.WriteLine("What is thou's password?");
+                        Console.Write("> ");
+                        userPass = Console.ReadLine();
+                    }
             }
             catch (Exception ex)
             {

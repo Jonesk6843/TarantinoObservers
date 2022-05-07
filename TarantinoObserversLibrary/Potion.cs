@@ -6,61 +6,35 @@ using System.Threading.Tasks;
 
 namespace TarantinoObserversLibrary
 {
-    public class Potion
+    public class Potion : Item
     {
         //Fields
-        private string _id;
-        private string _name;
-        private string _price;
         private string _valueChange;
-        private string _description;
+        private string _statusChange;
 
         //constructor
         public Potion()
         {
-            _id = " ";
-            _name = "";
-            _price = " ";
             _valueChange = " ";
-            _description = " ";
+            _statusChange = " ";
         }
 
-        public Potion (string id, string name, string description, string price, string valueChange)
+        public Potion (string statusChange, string valueChange)
         {
-            _id = id;
-            _name = name;
-            _price = price;
             _valueChange = valueChange;
-            _description = description;
+            _statusChange= statusChange;
         }
 
         //properties
-        public string ID
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
-
-        public string name
-        {
-            get { return _name; }
-            set { _name = value; }
-        }
-        public string description
-        {
-            get { return _description; }
-            set { _description = value; }
-        }
-        public string price
-        {
-            get { return _price; }
-            set { _price = value; }
-        }
-
         public string valueChange
         {
             get { return _valueChange; }
             set { _valueChange = value; }
+        }
+        public string statusChange
+        {
+            get { return _statusChange; }
+            set { _statusChange = value; }
         }
 
         //methods

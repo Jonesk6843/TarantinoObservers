@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bossMob.cs" />
     <Compile Include="LivingCreature.cs" />
     <Compile Include="World.cs" />
     <Compile Include="Item.cs" />
