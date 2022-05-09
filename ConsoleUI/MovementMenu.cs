@@ -30,7 +30,7 @@ namespace ConsoleUI
                     Console.WriteLine($"Currently, you are in the {World.rooms[currentRoom].name}");
                     Console.WriteLine(World.rooms[currentRoom].description);
                     Console.WriteLine("Make your choice, Observer.");
-                    Console.WriteLine($"Hp: {myStats.hp} MP: {myStats.ap} |type (help) for controls.");
+                    Console.WriteLine($"Hp: {myStats.hp + 100} MP: {myStats.ap + 50} |type (help) for controls.");
                     Console.Write("> ");
                     string input = Console.ReadLine();
 
